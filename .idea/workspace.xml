@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="879389d0-4913-41a1-8e4b-6612407f385e" name="Changes" comment="feat(users): complete CustomUser model and app setup">
+    <list default="true" id="879389d0-4913-41a1-8e4b-6612407f385e" name="Changes" comment="feat(users): add CustomUserAdmin and register in admin panel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chore_and_snore/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/chore_and_snore/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +93,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1752225769865</updated>
-      <workItem from="1752225770208" duration="10099000" />
+      <workItem from="1752225770208" duration="12116000" />
     </task>
     <task id="LOCAL-00001" summary="chore: initial project setup for Chore &amp; Snore">
       <option name="closed" value="true" />
@@ -111,7 +111,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752247991901</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat(users): add CustomUserAdmin and register in admin panel">
+      <option name="closed" value="true" />
+      <created>1752251635426</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1752251635426</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,6 +139,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="chore: initial project setup for Chore &amp; Snore" />
     <MESSAGE value="feat(users): complete CustomUser model and app setup" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(users): complete CustomUser model and app setup" />
+    <MESSAGE value="feat(users): add CustomUserAdmin and register in admin panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(users): add CustomUserAdmin and register in admin panel" />
   </component>
 </project>
