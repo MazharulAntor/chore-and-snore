@@ -3,11 +3,15 @@ from django.db import models
 
 
 class CustomUser(AbstractUser):
-    USER_TYPE_CHOICES = (
-        ('owner', 'Home Owner'),
-        ('renter', 'Renter'),
+    OCCUPATION_CHOICES = (
+        ('student', 'Student'),
+        ('labor', 'Labor'),
+        ('job_holder', 'Job Holder'),
+        ('freelancer', 'Freelancer'),
+        ('unemployed', 'Unemployed'),
+        ('other', 'Other'),
     )
-    user_type = models.CharField(max_length=10, choices=USER_TYPE_CHOICES)
+    occupation = models.CharField(max_length=20, choices=OCCUPATION_CHOICES, default='student')
     phone_number = models.CharField(max_length=15)
     address = models.TextField()
 
