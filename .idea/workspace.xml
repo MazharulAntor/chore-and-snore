@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="879389d0-4913-41a1-8e4b-6612407f385e" name="Changes" comment="feat(users): modify CustomUser class and CustomUserAdmin class">
+    <list default="true" id="879389d0-4913-41a1-8e4b-6612407f385e" name="Changes" comment="feat(groups): create groups app and Group class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chore_and_snore/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/chore_and_snore/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chores/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/chores/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groups/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/groups/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +97,7 @@
       <option name="presentableId" value="Default" />
       <updated>1752225769865</updated>
       <workItem from="1752225770208" duration="12217000" />
-      <workItem from="1752330047694" duration="3649000" />
+      <workItem from="1752330047694" duration="7014000" />
     </task>
     <task id="LOCAL-00001" summary="chore: initial project setup for Chore &amp; Snore">
       <option name="closed" value="true" />
@@ -136,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752332205079</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat(groups): create groups app and Group class">
+      <option name="closed" value="true" />
+      <created>1752334073712</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1752334073712</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,6 +170,7 @@
     <MESSAGE value="feat(users): add CustomUserAdmin and register in admin panel" />
     <MESSAGE value="feat(chores): complete Task model and app setup" />
     <MESSAGE value="feat(users): modify CustomUser class and CustomUserAdmin class" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(users): modify CustomUser class and CustomUserAdmin class" />
+    <MESSAGE value="feat(groups): create groups app and Group class" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(groups): create groups app and Group class" />
   </component>
 </project>
