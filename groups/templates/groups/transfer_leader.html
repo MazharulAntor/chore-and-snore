@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-4">
+  <h2>Transfer Leadership ({{ group.name }})</h2>
+  <form method="post">
+    {% csrf_token %}
+    <select name="new_leader" class="form-select">
+      {% for member in members %}
+        <option value="{{ member.id }}">{{ member.username }}</option>
+      {% endfor %}
+    </select>
+    <button class="btn btn-warning mt-3">Transfer</button>
+  </form>
+</div>
+{% endblock %}

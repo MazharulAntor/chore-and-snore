@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+  <h2>Welcome, {{ user.first_name }}!</h2>
+
+  <div class="mt-4">
+    <a href="{% url 'create_group' %}" class="btn btn-primary">+ Create New Group</a>
+  </div>
+
+  <hr>
+
+  <h4 class="mt-4">Groups You Lead</h4>
+  {% if leading_groups %}
+    <ul class="list-group">
+      {% for group in leading_groups %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          {{ group.name }}
+          <a href="{% url 'group_detail' group.id %}" class="btn btn-sm btn-outline-primary">View</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="text-muted">You’re not leading any groups.</p>
+  {% endif %}
+
+  <h4 class="mt-5">Groups You're a Member Of</h4>
+  {% if member_groups %}
+    <ul class="list-group">
+      {% for group in member_groups %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          {{ group.name }}
+          <a href="{% url 'group_detail' group.id %}" class="btn btn-sm btn-outline-secondary">View</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="text-muted">You haven't joined any groups yet.</p>
+  {% endif %}
+</div>
+{% endblock %}

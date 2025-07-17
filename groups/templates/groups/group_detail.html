@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container mt-4">
+        <h2>Group: {{ group.name }}</h2>
+        <p><strong>Leader:</strong> {{ group.leader.first_name }} {{ group.leader.last_name }}</p>
+
+        <h4>Members:</h4>
+        <ul>
+            {% for member in members %}
+                <li>{{ member.first_name }} {{ member.last_name }}</li>
+            {% endfor %}
+        </ul>
+
+        {% if is_leader %}
+            <a href="{% url 'add_member' group.id %}" class="btn btn-success mt-2">Add Member</a>
+            <a href="{% url 'transfer_leadership' group.id %}" class="btn btn-warning mt-2">Transfer Leadership</a>
+        {% endif %}
+
+        <a href="{% url 'leave_group' group.id %}" class="btn btn-danger mt-2">Leave Group</a>
+    </div>
+{% endblock %}
