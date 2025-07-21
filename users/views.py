@@ -7,8 +7,7 @@ def register(request):
         form = CustomUserRegistrationForm(request.POST)
         if form.is_valid():
             user = form.save()
-            login(request, user)  # Optional: log them in after registration
-            return redirect('home')  # Replace 'home' with your actual home page
+            return redirect('login')
     else:
         form = CustomUserRegistrationForm()
     return render(request, 'users/register.html', {'form': form})
