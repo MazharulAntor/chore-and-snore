@@ -14,8 +14,47 @@
         {% if is_leader %}
             <a href="{% url 'add_member' group.id %}" class="btn btn-success mt-2">Add Member</a>
             <a href="{% url 'transfer_leadership' group.id %}" class="btn btn-warning mt-2">Transfer Leadership</a>
+            <a href="{% url 'create_task' group.id %}" class="btn btn-primary mt-2">+ Add Task</a>
         {% endif %}
 
         <a href="{% url 'leave_group' group.id %}" class="btn btn-danger mt-2">Leave Group</a>
+
+        <ul class="list-group mt-4">
+            {% for task in group.task_set.all %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                        <strong>{{ task.title }}</strong><br>
+                        <small>Due: {{ task.due_date }} | Assigned to: {{ task.assigned_to }}</small>
+                    </div>
+                    <div>
+                        {% if request.user == group.leader %}
+                            <a href="{% url 'update_task' task.id %}" class="btn btn-sm btn-secondary">Edit</a>
+                            <a href="{% url 'delete_task' task.id %}" class="btn btn-sm btn-danger">Delete</a>
+                        {% endif %}
+                        {% if request.user == task.assigned_to or request.user == task.created_by %}
+                            {% if request.user == task.assigned_to %}
+                                <a href="{% url 'toggle_task_completion' task.id %}"
+                                   class="btn btn-sm {% if task.is_completed %}btn-success{% else %}btn-outline-success{% endif %}"
+                                   onclick="return confirm('{% if not task.is_completed %}Are you sure you have honestly completed this task and want to mark it as done?{% else %}Are you sure you want to mark this task as not completed?{% endif %}');">
+                                    {% if task.is_completed %}Completed{% else %}Mark Done{% endif %}
+                                </a>
+                            {% else %}
+                                <a href="{% url 'toggle_task_completion' task.id %}"
+                                   class="btn btn-sm {% if task.is_completed %}btn-success{% else %}btn-outline-success{% endif %}"
+                                   onclick="return confirm('{% if task.is_completed %}Are you sure the task was not completed by {{ task.assigned_to }}?{% else %}Are you sure the task is completed by {{ task.assigned_to }}?{% endif %}');">
+                                    {% if task.is_completed %}Completed{% else %}Mark Done{% endif %}
+                                </a>
+                            {% endif %}
+                        {% else %}
+                            <span class="badge {% if task.is_completed %}bg-success{% else %}bg-secondary{% endif %}">
+                                {% if task.is_completed %}Completed{% else %}Pending{% endif %}
+                            </span>
+                        {% endif %}
+                    </div>
+                </li>
+            {% empty %}
+                <li class="list-group-item">No tasks have been added yet.</li>
+            {% endfor %}
+        </ul>
     </div>
 {% endblock %}

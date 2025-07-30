@@ -4,21 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="879389d0-4913-41a1-8e4b-6612407f385e" name="Changes" comment="feat(groups): implement group creation, member addition, leadership transfer, and leaving group">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e0729945-3f96-45af-bb2d-3b746d587abb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e0729945-3f96-45af-bb2d-3b746d587abb.xml" afterDir="false" />
+    <list default="true" id="879389d0-4913-41a1-8e4b-6612407f385e" name="Changes" comment="chore: reset database and fix some problem">
+      <change afterPath="$PROJECT_DIR$/tasks/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tasks/templates/tasks/create_task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tasks/templates/tasks/update_task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tasks/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chore_and_snore/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/chore_and_snore/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chores/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chores/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chores/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chores/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chores/migrations/0002_task_group.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chores/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chores/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chores/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chores/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chore_and_snore/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/chore_and_snore/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/groups/templates/groups/group_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/groups/templates/groups/group_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -130,7 +125,8 @@
       <workItem from="1753009216125" duration="5235000" />
       <workItem from="1753083273512" duration="2509000" />
       <workItem from="1753085850312" duration="825000" />
-      <workItem from="1753086733050" duration="1562000" />
+      <workItem from="1753086733050" duration="6985000" />
+      <workItem from="1753866105128" duration="7764000" />
     </task>
     <task id="LOCAL-00001" summary="chore: initial project setup for Chore &amp; Snore">
       <option name="closed" value="true" />
@@ -212,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752755567685</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="chore: reset database and fix some problem">
+      <option name="closed" value="true" />
+      <created>1753088675910</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1753088675910</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +244,7 @@
     <MESSAGE value="chore: complete registration part using Django forms" />
     <MESSAGE value="chore(auth): complete Django built-in login and update registration form" />
     <MESSAGE value="feat(groups): implement group creation, member addition, leadership transfer, and leaving group" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(groups): implement group creation, member addition, leadership transfer, and leaving group" />
+    <MESSAGE value="chore: reset database and fix some problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: reset database and fix some problem" />
   </component>
 </project>
